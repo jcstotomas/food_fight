@@ -22,6 +22,8 @@ def get_random_restaurant(location="irvine", limit=5):
     return success_response(200, payload=businesses_objects, message="Businesses loaded")
 
 
+
+
 def ingest_data(data_json):
     # restaurant name, cuisine, image. hyperlink to the yelp page 
     restaurant_objects = []
@@ -36,3 +38,4 @@ def construct_categories(categories):
     
     return category_string[:len(category_string)-1]
     
+
