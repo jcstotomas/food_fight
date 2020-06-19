@@ -2,15 +2,12 @@
 
 <div>
   <h2>1. enter your location so we can get local restaurants</h2>
-  <form action="">
-    <input />
-    <input type="submit" />
-  </form>
-</div>
-<div>
-  <h2>2. select some of your favorite cuisines</h2>
-  <form action="">
-    <input />
-    <input type="submit" />
+  <form action="/restaurants" method="post">
+    <input type="text" id="location" name="location" />
+    <h2>2. select some of your favorite cuisines</h2>
+
+    <input type="checkbox" name="cuisine" value="japanese" />
+    <input type="checkbox" name="cuisine" value="chinese" />
+    <input type="submit" value="Submit" />
   </form>
 </div>

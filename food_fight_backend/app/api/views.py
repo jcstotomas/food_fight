@@ -3,7 +3,7 @@ import os
 import requests
 import json
 from app.api.responses import success_response
-from flask import render_template
+from flask import render_template, request
 
 @bp.route("home", methods=["GET"])
 def get_home():
@@ -11,4 +11,5 @@ def get_home():
 
 @bp.route("random", methods=["GET"])
 def get_random():
+    # data = request.form["location"]
     return render_template('random_restaurant.html')
