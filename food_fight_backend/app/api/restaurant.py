@@ -21,7 +21,8 @@ def get_random_restaurant(limit=5):
     data = requests.get(API_ENDPOINT, params=payload, headers=headers)
     businesses = data.json()["businesses"]     
     businesses_objects = ingest_data(businesses)
-    return render_template("random_result.html")
+    
+    return render_template("random_result.html", results=businesses_objects)
 
 
 
