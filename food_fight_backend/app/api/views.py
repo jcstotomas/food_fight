@@ -5,6 +5,7 @@ import json
 from app.api.responses import success_response
 from flask import render_template, request
 
+@bp.route("/", methods=["GET"])
 @bp.route("home", methods=["GET"])
 def get_home():
     return render_template('Home.html')

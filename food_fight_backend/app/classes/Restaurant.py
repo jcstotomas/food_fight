@@ -6,6 +6,10 @@ class Restaurant:
             self.name = raw_object["name"]
         else:
             self.name = None
+        if "rating" in raw_object:
+            self.rating = raw_object["rating"]
+        else:
+            self.rating = None
         
         if "image_url" in raw_object:
             self.image_url = raw_object["image_url"]
@@ -38,5 +42,6 @@ class Restaurant:
             "image_url": self.image_url,
             "url": self.url,
             "categories":self.categories,
-            "price": self.price
+            "price": self.price,
+            "rating" : self.rating
         }

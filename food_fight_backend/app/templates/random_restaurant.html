@@ -5,9 +5,35 @@
   <form action="/restaurants" method="post">
     <input type="text" id="location" name="location" />
     <h2>2. select some of your favorite cuisines</h2>
-
-    <input type="checkbox" name="cuisine" value="japanese" />
-    <input type="checkbox" name="cuisine" value="chinese" />
+    <input type="checkbox" id="japanese" name="cuisine" value="japanese" />
+    <label for="japanese"> Japanese</label>
+    <input type="checkbox" id="chinese" name="cuisine" value="chinese" />
+    <label for="chinese"> Chinese</label>
+    <input type="checkbox" id="American" name="cuisine" value="newamerican" />
+    <label for="American"> American</label>
+    <input type="checkbox" id="Indian" name="cuisine" value="indpak" />
+    <label for="Indian"> Indian</label>
+    <input type="checkbox" id="mexican" name="cuisine" value="mexican" />
+    <label for="mexican"> Mexican</label>
+    <input type="checkbox" id="italian" name="cuisine" value="italian" />
+    <label for="italian"> Italian</label>
+    <input
+      type="checkbox"
+      id="breakfast"
+      name="breakfast"
+      value="breakfast_brunch"
+    />
+    <label for="breakfast"> Breakfast</label>
+    <input type="checkbox" id="thai" name="cuisine" value="thai" />
+    <label for="thai"> Thai</label>
+    <input type="checkbox" id="Korean" name="cuisine" value="korean" />
+    <label for="Korean"> Korean</label>
+    <input type="checkbox" id="viet" name="cuisine" value="vietnamese" />
+    <label for="viet"> Vietnamese</label>
+    <input type="checkbox" id="sandwich" name="cuisine" value="sandwich" />
+    <label for="sandwich"> Sandwiches</label>
+    <h2>3. Select the number of results you would like</h2>
+    <input type="text" id="limit" name="limit" />
     <input type="submit" value="Submit" />
   </form>
 </div>
