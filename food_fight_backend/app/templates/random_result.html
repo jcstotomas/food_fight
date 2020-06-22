@@ -4,16 +4,23 @@
             "url": self.url,
             "categories":self.categories,
             "price": self.price -->
-<div>
-  <h1>Results</h1>
+<head>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',filename='/styles.css') }}"
+  />
+</head>
+<h1>Results</h1>
+<div class="container">
   {% for business in results %}
-  <div>
+  <div class="card">
     <h4>{{business.name}}</h4>
     <h4>{{business.rating}}</h4>
     <h5>{{business.price}}</h5>
     <h5>{{business.categories}}</h5>
-    <h5>{{business.url}}</h5>
-    <h5>{{business.image_url}}</h5>
+    <!-- <h5>{{business.url}}</h5> -->
+    <!-- <h5>{{business.image_url}}</h5> -->
   </div>
   {% endfor %}
 </div>
