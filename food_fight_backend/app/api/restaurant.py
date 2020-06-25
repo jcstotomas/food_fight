@@ -26,7 +26,9 @@ def get_random_restaurant():
     filtered_businesses = randomize_business(businesses_objects, results_limit)
     return render_template("random_result.html", results=filtered_businesses)
 
-
+@bp.route("fight", methods=["POST"])
+def pick_restaurant():
+    pass
 
 
 def ingest_data(data_json):
