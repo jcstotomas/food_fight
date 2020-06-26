@@ -10,6 +10,19 @@ from flask import request, render_template
 def get_fight():
     restaurants = request.form["restaurant"]
     restaurant_split = restaurants.split(",")
+    seen = set()
+    for restaurant in restaurant_split:
+        if restaurant.lower() not in seen:
+            seen.add(restaurant.lower())
+    pairs = []
+    seen_list = list(seen)
+    if len(seen_list) > 1:
+        for i in range(0,len(seen_list), 2):
+            first_restaurant = seen_list[i]
+            if (i+1 == len(seen_list)):
+                second_restaurant = None
+            else:
+                second_restaurant = seen_list[i+1]
+            pairs.append([first_restaurant, second_restaurant])
 
-    
-    return "Asdf"
+    return render_template('fight_results.html', pairs = pairs)
