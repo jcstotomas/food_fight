@@ -5,4 +5,4 @@ bp = Blueprint('api', __name__)
 
 
 
-from app.api import restaurant, views
+from app.api import restaurant, views, fight

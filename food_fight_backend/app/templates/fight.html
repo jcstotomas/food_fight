@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<div>
+  <h2>1. enter your location so we can get local restaurants</h2>
+  <form action="/fights" method="post">
+    <input type="text" id="restaurant" name="restaurant" />
+    <button type="button" onclick="addInputValue();">Add</button>
+    <input type="submit" value="Submit" onclick="sendInput();" />
+  </form>
+</div>
+
+<script>
+  var restaurants = [];
+  function addInputValue() {
+    var inputValue = document.getElementById("restaurant").value;
+    if (inputValue != "") {
+      restaurants.push(inputValue);
+    }
+    document.getElementById("restaurant").value = "";
+    console.log(restaurants);
+  }
+
+  function sendInput() {
+    document.getElementById("restaurant").value = restaurants;
+  }
+</script>

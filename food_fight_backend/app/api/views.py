@@ -14,3 +14,8 @@ def get_home():
 def get_random():
     # data = request.form["location"]
     return render_template('random_restaurant.html')
+
+
+@bp.route("fight", methods=["GET"])
+def fight():
+    return render_template('fight.html')
