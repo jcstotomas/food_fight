@@ -2,7 +2,12 @@
 
 <div>
   <h2>Results</h2>
-  {% for pair in pair %}
+  {% for pair in pairs %}
 
-  <div></div>
+  <div>
+    <h3>{{pair[0]}} vs {{pair[1]}}</h3>
+    <button>{{pair[0]}}</button>
+    <button>{{pair[1]}}</button>
+    {% endfor %}
+  </div>
 </div>
