@@ -27,6 +27,9 @@ def get_random_restaurant():
     return render_template("random_result.html", results=filtered_businesses)
 
 
+@bp.route("results", methods=["POST"])
+def show_final_results():
+    return render_template("final_fight_results.html", results=request.form.items())
 
 def ingest_data(data_json):
     # restaurant name, cuisine, image. hyperlink to the yelp page 

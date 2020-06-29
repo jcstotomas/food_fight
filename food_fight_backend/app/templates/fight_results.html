@@ -3,11 +3,26 @@
 <div>
   <h2>Results</h2>
   {% for pair in pairs %}
+  <form action="/results" method="post">
+    <div>
+      <h3>{{pair[0]}} vs {{pair[1]}}</h3>
+      <input
+        type="radio"
+        id="{{pair[2]}}"
+        name="{{pair[2]}}"
+        value="{{pair[0]}}"
+      />
+      <label for="first">{{pair[0]}}</label>
 
-  <div>
-    <h3>{{pair[0]}} vs {{pair[1]}}</h3>
-    <button class="first">{{pair[0]}}</button>
-    <button class="second">{{pair[1]}}</button>
-    {% endfor %}
-  </div>
+      <input
+        type="radio"
+        id="{{pair[2]}}"
+        name="{{pair[2]}}"
+        value="{{pair[1]}}"
+      />
+      <label for="second">{{pair[1]}}</label>
+      {% endfor %}
+    </div>
+    <input type="submit" value="Submit" />
+  </form>
 </div>

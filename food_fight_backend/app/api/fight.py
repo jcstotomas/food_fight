@@ -23,6 +23,6 @@ def get_fight():
                 second_restaurant = None
             else:
                 second_restaurant = seen_list[i+1]
-            pairs.append([first_restaurant, second_restaurant])
+            pairs.append([first_restaurant, second_restaurant, "pair" + str(i)])
 
     return render_template('fight_results.html', pairs = pairs)
