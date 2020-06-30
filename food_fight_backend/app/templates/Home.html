@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-
+<head>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',filename='/styles.css') }}"
+  />
+</head>
 <title>Food Fight</title>
 
-<section>
-  <h1>Trouble Deciding Your Food?</h1>
-  <h3>Let us decide for you</h3>
-  <form action="/random">
+<section class="intro_section">
+  <h1 class="header">Trouble Deciding Your Food?</h1>
+  <h3 class="subheader">Let us decide for you</h3>
+  <form class="home_form" action="/random">
     <input type="submit" value="Random" />
   </form>
 
-  <form action="/fight">
+  <form class="home_form" action="/fight">
     <input type="submit" value="Fight" />
   </form>
 </section>
